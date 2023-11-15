@@ -15,7 +15,7 @@ const newTransactionFormSchema = z.object({
   description: z.string(),
   price: z.number(),
   category: z.string(),
-  // type: z.enum(["income", "outcome"]),
+  type: z.enum(["income", "outcome"]),
 });
 
 type NewTransactionFormInputs = z.infer<typeof newTransactionFormSchema>;
