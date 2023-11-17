@@ -27,6 +27,8 @@
   "scripts": {
     "start": "react-scripts start",
     "dev:server": "json-server server.json -w -d 500",
+    "lint": "eslint src --ext .tsx,.ts",
+    "link:fix": "eslint src --ext .tsx,.ts --fix",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -50,7 +52,9 @@
     ]
   },
   "devDependencies": {
+    "@rocketseat/eslint-config": "^2.1.0",
     "@types/styled-components": "^5.1.29",
+    "eslint": "^8.53.0",
     "json-server": "^0.17.4"
   }
 }
