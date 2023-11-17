@@ -9,7 +9,7 @@
       "createdAt": "2023-10-26T20:10:27.431Z"
     },
     {
-      "id": 1,
+      "id": 2,
       "description": "Hamburguer",
       "type": "outcome",
       "category": "Alimentação",
@@ -17,12 +17,36 @@
       "createdAt": "2023-10-24T10:06:22.431Z"
     },
     {
-      "id": 1,
+      "id": 3,
       "description": "Ignite",
       "type": "outcome",
       "category": "Educação",
       "price": 500,
       "createdAt": "2023-10-24T10:06:22.431Z"
+    },
+    {
+      "description": "Desenvolvimento de app",
+      "price": 10000,
+      "category": "Venda",
+      "type": "income",
+      "createAt": "2023-11-17T16:47:47.086Z",
+      "id": 4
+    },
+    {
+      "description": "Desenvolvimento de app",
+      "price": 10000,
+      "category": "Venda",
+      "type": "income",
+      "createAt": "2023-11-17T17:09:35.182Z",
+      "id": 5
+    },
+    {
+      "description": "Desenvolvimento de app",
+      "price": 10000,
+      "category": "Venda",
+      "type": "outcome",
+      "createAt": "2023-11-17T17:10:29.230Z",
+      "id": 6
     }
   ]
 }
