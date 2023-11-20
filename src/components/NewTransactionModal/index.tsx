@@ -10,8 +10,9 @@ import { ArrowCircleDown, ArrowCircleUp, X } from "phosphor-react";
 import * as z from "zod";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useContext } from "react";
 import { TransactionsContext } from "../../contexts/TransactionsContext";
+import { useContextSelector } from "use-context-selector";
+
 
 const newTransactionFormSchema = z.object({
   description: z.string(),
@@ -23,7 +24,12 @@ const newTransactionFormSchema = z.object({
 type NewTransactionFormInputs = z.infer<typeof newTransactionFormSchema>;
 
 export function NewTransactionModal() {
-  const {createTransaction} = useContext(TransactionsContext)
+  const createTransaction = useContextSelector(
+    TransactionsContext,
+    (context) => {
+      return context.createTransaction
+    },
+  )
 
   const {
     control,
@@ -34,19 +40,19 @@ export function NewTransactionModal() {
   } = useForm<NewTransactionFormInputs>({
     resolver: zodResolver(newTransactionFormSchema),
     defaultValues: {
-      type: 'income',
-    }
+      type: "income",
+    },
   });
 
   async function handleCreateNewTransaction(data: NewTransactionFormInputs) {
-    const {description, price, category, type} = data;
+    const { description, price, category, type } = data;
 
-    await createTransaction ({
+    await createTransaction({
       description,
       price,
       category,
       type,
-    })
+    });
     reset();
   }
 
@@ -80,11 +86,14 @@ export function NewTransactionModal() {
           <Controller
             control={control}
             name="type"
-            render={({field}) => {
+            render={({ field }) => {
               console.log(field);
-              
+
               return (
-                <TransactionType onValueChange={field.onChange} value={field.value}>
+                <TransactionType
+                  onValueChange={field.onChange}
+                  value={field.value}
+                >
                   <TransactionTypeButton variant="income" value="income">
                     <ArrowCircleUp size={24} />
                     Entrada

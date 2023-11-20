@@ -1,13 +1,14 @@
-import { ReactNode, createContext, useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { api } from "../lib/axios";
+import { createContext } from "use-context-selector";
 
 interface Transaction {
   id: number;
   description: string;
   type: "income" | "outcome";
-  // price: number;
-  // category: string;
-  // createdAt: string;
+  price: number;
+  category: string;
+  createdAt: string;
 }
 
 interface CreateTransactionInput {
@@ -48,9 +49,9 @@ export function TransactionsProvider({ children }: TransactionProviderProps) {
   
     const response = await api.post("transactions", {
       description,
-      // price,
-      // category,
-      // type,
+      price,
+      category,
+      type,
       createAt: new Date(),
     });
 
