@@ -24,42 +24,11 @@
       "price": 500,
       "createdAt": "2023-10-24T10:06:22.431Z"
     },
-    {
-      "description": "Desenvolvimento de app",
-      "price": 10000,
-      "category": "Venda",
-      "type": "income",
-      "createAt": "2023-11-17T16:47:47.086Z",
-      "id": 4
-    },
-    {
-      "description": "Desenvolvimento de app",
-      "price": 10000,
-      "category": "Venda",
-      "type": "income",
-      "createAt": "2023-11-17T17:09:35.182Z",
-      "id": 5
-    },
-    {
-      "description": "Desenvolvimento de app",
-      "price": 10000,
-      "category": "Venda",
-      "type": "outcome",
-      "createAt": "2023-11-17T17:10:29.230Z",
-      "id": 6
-    },
-    {
-      "description": "Desenvolvimento de app",
-      "price": 10000,
-      "category": "Venda",
-      "type": "income",
-      "createAt": "2023-11-21T18:59:13.425Z",
-      "id": 7
-    },
+  
     {
       "description": "Carro",
       "price": 40000,
-      "category": "Automovel",
+      "category": "Automóvel",
       "type": "income",
       "createdAt": "2023-11-21T19:36:49.490Z",
       "id": 8
