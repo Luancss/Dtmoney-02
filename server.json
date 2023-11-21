@@ -55,6 +55,14 @@
       "type": "income",
       "createAt": "2023-11-21T18:59:13.425Z",
       "id": 7
+    },
+    {
+      "description": "Carro",
+      "price": 40000,
+      "category": "Automovel",
+      "type": "income",
+      "createdAt": "2023-11-21T19:36:49.490Z",
+      "id": 8
     }
   ]
 }
