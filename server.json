@@ -47,6 +47,14 @@
       "type": "outcome",
       "createAt": "2023-11-17T17:10:29.230Z",
       "id": 6
+    },
+    {
+      "description": "Desenvolvimento de app",
+      "price": 10000,
+      "category": "Venda",
+      "type": "income",
+      "createAt": "2023-11-21T18:59:13.425Z",
+      "id": 7
     }
   ]
 }
